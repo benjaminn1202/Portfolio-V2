@@ -1,0 +1,463 @@
+@font-face {
+    font-family: radley;
+    src: url('fonts/Radley.otf');
+}
+@font-face {
+    font-family: redhatmono;
+    src: url('fonts/RedHatMono.ttf');
+}
+@font-face {
+    font-family: oswald;
+    src: url('fonts/OswaldRegular.ttf');
+}
+@font-face {
+    font-family: roboto;
+    src: url('fonts/RobotoRegular.ttf');
+}
+@font-face {
+    font-family: roboto-light;
+    src: url('fonts/RobotoLight.ttf');
+}
+@font-face {
+    font-family: roboto-thin;
+    src: url('fonts/RobotoThin.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-padding-top: 6.25rem;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+/*
+---------------------------------------------------------------------------
+HEADER
+---------------------------------------------------------------------------
+*/
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    position: fixed;
+    top: 0;
+    min-height: 6.25rem;
+    z-index: 2;
+}
+
+.logo {
+    margin: 1.5rem;
+    text-decoration: none;
+    color: #4A4A4A;
+}
+.logo .title {
+    font-size: 1.5rem;
+    font-family: radley;
+}
+.logo .subtitle {
+    font-size: 1rem;
+    font-family: redhatmono;
+    
+}
+
+nav ul {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    font-family: oswald;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+nav ul li {
+    margin: 0 1rem;
+    text-align: center;
+}
+nav ul li:last-child {
+    margin-right: 1.5rem;
+}
+nav ul li a {
+    color: #4258A4;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav ul li:hover {
+    transform: scale(1.025);
+    filter: brightness(110%);
+    animation: 1 onhover 300ms;
+}
+
+
+/*
+---------------------------------------------------------------------------
+CONTENT
+---------------------------------------------------------------------------
+*/
+.content {
+    width: 100%;
+    height: auto;
+    font-family: roboto-light;
+}
+
+
+.content section:first-child {
+    margin-top: 6.25rem;
+}
+section {
+    color: #4A4A4A;
+    font-size: 1rem;
+}
+section.type-a {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+section.type-b {
+    width: 100%;
+    background-color: #E9E8E8;
+}
+section .subcontainer {
+    margin: 0 1.5rem;
+}
+
+/*
+---------------------------------------------------------------------------
+ABOUT ME
+---------------------------------------------------------------------------
+*/
+section.about-me .subcontainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+}
+section.about-me .subcontainer .column-1 {
+    width: 23%;
+}
+section.about-me .subcontainer .column-2 {
+    width: 48%;
+}
+section.about-me .subcontainer .column-3 {
+    width: 23%;
+}
+
+section.about-me .subcontainer .column h1.type-b:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+section.about-me .subcontainer .column-1 img.benjamin {
+    width: 100%;
+}
+section.about-me .subcontainer .column-1 .name {
+    font-size: 1.25rem;
+}
+section.about-me .subcontainer .column-1 .title {
+    font-family: roboto-light;
+}
+section.about-me .subcontainer .column-1 .bio {
+    font-family: roboto-thin;
+    margin: 1rem 0;
+}
+
+section.about-me .subcontainer .column2 p:last-child {
+    margin-bottom: 0rem;
+}
+section.about-me .subcontainer .column p:last-child {
+    margin-bottom: 1.5rem;
+}
+
+/*
+---------------------------------------------------------------------------
+MY PROJECTS
+---------------------------------------------------------------------------
+*/
+section.my-projects .subcontainer {
+    margin: 0 1.5rem;
+}
+section.my-projects .subcontainer .card-container {
+    width: 12rem;
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+    filter: brightness(80%);
+}
+section.my-projects .subcontainer .card-container img {
+    width: 100%;
+}
+section.my-projects .subcontainer .card-container p {
+    width: 98%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section.my-projects .subcontainer .card-container:hover {
+    transform: scale(1.025);
+    filter: brightness(100%);
+    animation: 1 onhover 300ms;
+}
+
+
+/*
+---------------------------------------------------------------------------
+CONTACT ME
+---------------------------------------------------------------------------
+*/
+section.contact-me .subcontainer {
+    margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contact-me .subcontainer .contact-form {
+    width: 65%;
+    box-shadow: 0 0 3px #4A4A4A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+section.contact-me .subcontainer .contact-form .heading-container {
+    width: 85%;
+    margin-top: 1.5rem;
+    text-align: start;
+}
+section.contact-me .subcontainer .contact-form .heading-container h1.type-b {
+    transform: translateX(-1.5rem);
+    padding: 0.25rem 1rem;
+    color: #575555;
+}
+section.contact-me .subcontainer .contact-form .paragraph-container {
+    width: 85%;
+    text-align: start;
+}
+section.contact-me .subcontainer .contact-form .paragraph-container p {
+    transform: translateX(-1.5rem);
+    padding: 0rem 1rem;
+    color: #575555;
+    font-family: roboto-light;
+}
+section.contact-me .subcontainer .contact-form input {
+    /* border: 3px solid #CCCCCC; */
+    border: unset;
+    box-shadow: 0 0 3px #575555 inset;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
+    width: 85%;
+    color: #575555;
+    font-size: 1rem;
+    font-family: roboto-light;
+}
+section.contact-me .subcontainer .contact-form textarea {
+    /* border: 3px solid #CCCCCC; */
+    border: unset;
+    box-shadow: 0 0 3px #575555 inset;
+    margin: 1rem 0 1rem 0;
+    padding: 0.5rem;
+    width: 85%;
+    height: 20rem;
+    color: #575555;
+    resize: none;
+    font-size: 1rem;
+    font-family: roboto-light;
+}
+section.contact-me .subcontainer .contact-form .btn-container {
+    /* width: calc(85% + 3px); */
+    width: 85%;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+section.contact-me .subcontainer .contact-form button {
+    transform: translateX(-0.5rem);
+    padding: 0.25rem 1rem;
+    font-size: 1rem;
+    font-family: roboto-thin;
+    cursor: pointer;
+    color: #575555;
+    border: 1px solid #575555;
+}
+section.contact-me .subcontainer .contact-form button:hover {
+    filter: brightness(90%);
+}
+section.contact-me .subcontainer .information {
+    width: 33%;
+}
+section.contact-me .subcontainer .information h1.social-accounts {
+    margin-top: 3rem;
+}
+section.contact-me .subcontainer .information .information-group {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+}
+section.contact-me .subcontainer .information .information-group p {
+    display: inline-block;
+    width: 6rem;
+    color: #9E9B9B;
+}
+section.contact-me .subcontainer .information .information-group a {
+    width: auto;
+    display: inline-block;
+    color: #4A4A4A;
+}
+/*
+---------------------------------------------------------------------------
+FOOTER
+---------------------------------------------------------------------------
+*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #F5F5F5;
+}
+footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1.5rem;
+}
+
+.back-btn {
+    color: #4258A4;
+    text-decoration: none;
+    cursor: pointer;
+}
+.projects-container section.project-info .subcontainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+}
+.projects-container section.project-info .subcontainer .column-1 {
+    width: 23%;
+}
+.projects-container section.project-info .subcontainer .column-2 {
+    width: 48%;
+}
+.projects-container section.project-info .subcontainer .column-3 {
+    width: 23%;
+}
+.projects-container section.project-info .subcontainer .column h1.type-b:not(:first-child) {
+    margin-top: 3.5rem;
+}
+
+.projects-container section.project-info .subcontainer .column-1 img.proj-image {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.projects-container section.project-info .subcontainer .column p:last-child {
+    margin-bottom: 1rem;
+}
+
+.projects-container {
+    display: none;
+}
+.container {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 16px;
+        scroll-padding-top: 9.1rem;
+    }
+    header {
+        flex-direction: column;
+        min-height: 9.1rem; 
+        max-height: 9.1rem;  
+    }
+    .logo {
+        text-align: center;
+    }
+    nav ul {
+        margin-bottom: 1.5rem;
+    }
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+    .content section:first-child {
+        margin-top: 9.1rem;
+    }
+    section.about-me .subcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 1.5rem;
+    }
+    section.about-me .subcontainer .column-1, section.about-me .subcontainer .column-2, section.about-me .subcontainer .column-3 {
+        width: 100%;
+    }
+    section.my-projects .subcontainer .card-container {
+        width: 40%;
+        max-width: 13rem;
+    }
+    section.contact-me .subcontainer {
+        flex-direction: column;
+    }
+    section.contact-me .subcontainer .contact-form {
+        width: 100%;
+    }
+    section.contact-me .subcontainer .information {
+        width: 100%;
+    }
+    .projects-container section.project-info .subcontainer {
+        flex-direction: column;
+    }
+    .projects-container section.project-info .subcontainer .column-1, .projects-container section.project-info .subcontainer .column-2, .projects-container section.project-info .subcontainer .column-3 {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* HEADING TYPES */
+h1.type-a {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+h1.type-b {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+@keyframes onhover {
+    from {
+        transform: scale(1);
+        filter: brightness(80%);
+    }
+    to {
+        transform: scale(1.025);
+        filter: brightness(100%);
+    }
+}
